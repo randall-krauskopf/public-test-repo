@@ -1,0 +1,17 @@
+name: Reproduce dispatch 404
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: Test input
+        required: true
+        default: test
+
+permissions: {}
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "No-op workflow"
